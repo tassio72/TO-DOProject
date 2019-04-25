@@ -1,9 +1,8 @@
 <template>
     
-    <div class="barra-externa">
-        <div class="barra-interna">
-         <p> {{ desempenho}} </p> 
-        </div>
+    <div class="barra-externa"> 
+        <div class="barra-interna"> </div> 
+        <p> {{ desempenho}}  </p>
     </div>
 
 
@@ -24,20 +23,28 @@ export default {
 <style>
 
     .barra-externa {
-        display: flex;
-        justify-content: center;
         width: 80%;
         height: 20px;
         border: 1px solid white;
         border-radius: 3px;
 
     }
-    .barra-externa .barra-interna  {
+    .barra-interna  {
         color: white;
-        display: flex;
-        justify-content: center;
+        background: rgb(83, 212, 83);
+        height: 100%;
+        width: 70%;
         text-align: center;
-        align-items: center
+        
+        
     }
 
+    .barra-interna p {
+        margin: 0%;
+        padding: 0%;
+        position: absolute; 
+        z-index: -1;
+    }
+   
+   
 </style>
