@@ -1,5 +1,9 @@
 <template>
-    
+    <div class="taks">
+
+        <slot> </slot>
+
+    </div>
 </template>
 
 <script>

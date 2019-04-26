@@ -1,17 +1,18 @@
 <template>
 	<div id="app">
 		<h1>Tarefas</h1>
-		<app-bar> 
-			
-		</app-bar>
+		<app-bar> </app-bar>
+
+		<app-taks/>
 	</div>
 </template>
 
 <script>
 import Bar from './componentes/Bar'
+import NewTaks from './componentes/NewTaks'
 
 export default {
-	components: { 'app-bar': Bar},
+	components: { 'app-bar': Bar, 'app-taks': NewTaks},
 
 }
 </script>
