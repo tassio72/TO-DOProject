@@ -1,11 +1,17 @@
 <template>
 	<div id="app">
 		<h1>Tarefas</h1>
+		<app-bar> 
+			
+		</app-bar>
 	</div>
 </template>
 
 <script>
+import Bar from './componentes/Bar'
+
 export default {
+	components: { 'app-bar': Bar},
 
 }
 </script>
