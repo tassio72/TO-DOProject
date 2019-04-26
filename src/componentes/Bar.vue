@@ -1,8 +1,7 @@
 <template>
     
     <div class="barra-externa"> 
-        <div class="barra-interna"> </div> 
-        <p> {{ desempenho}}  </p>
+     {{ `${desempenho}%` }}  
     </div>
 
 
@@ -27,23 +26,20 @@ export default {
         height: 20px;
         border: 1px solid white;
         border-radius: 3px;
-
+        position: relative;
+        text-align: center;
+        font-weight: 600;
+    
     }
-    .barra-interna  {
-        color: white;
+    .barra-externa::after  {
+        content: '';
         background: rgb(83, 212, 83);
         height: 100%;
         width: 70%;
-        text-align: center;
-        
-        
-    }
-
-    .barra-interna p {
-        margin: 0%;
-        padding: 0%;
-        position: absolute; 
+        position: absolute;
         z-index: -1;
+        left: 0;        
+        
     }
    
    
