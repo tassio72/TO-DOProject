@@ -21,7 +21,7 @@ export default {
         width: 80%;
         border: 1px solid #FFF;
         border-radius: 8px;
-        margin-bottom: 15px;
+        margin-bottom: 4px;
         display: flex;
         flex-direction: column;
         align-items: center;

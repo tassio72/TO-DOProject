@@ -27,29 +27,33 @@ export default {
 <style>
 
     .new-task {
-        margin: 35px;
+        margin: 15px;
     }
 
     .form-element {
         outline: none;
-        font-size: 2rem;
+        font-size: 1.5rem;
         border: 1px solid #FFF;
-        padding: 5px 10px 8px;
+        padding: 5px 5px 8px;
         color: #FFF;
     }
 
     input.form-element {
+        
         width: 500px;
         background: #FFF2;
         border-top-left-radius: 8px;
         border-bottom-left-radius: 8px;
+
     }
 
     button.form-element {
+        
         border-left: none;
         background-color: #2196F3;
         border-top-right-radius: 8px;
         border-bottom-right-radius: 8px;
+        cursor: pointer;
 
     }
 

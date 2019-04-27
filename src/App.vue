@@ -30,6 +30,27 @@ export default {
 		}
 
 	},
+	watch: {
+		/*Se deixar o watch monitorando o array tasks da forma que está abaixo, ele apenas monitorará a alteração do array em si.
+		Ou seja, a adição ou remoção de objetos.  
+		tasks() {
+			localStorage.setItem('tasksStorage', JSON.stringify(this.tasks))
+		} 
+		
+		No entando, sabemos que podem aconter mudanças não apenas no array, mas também nos elementos deste. Coomo por exemplo,
+		a alteração do atributo pending (sendo true or false)
+
+		Para driblarmos isso, é necessário usar o array, dentro de watch, como uma propriedade e usar a palavra reservada deep.
+		Ela fará o monitoramento a fundo do array, incluindo seus elementos.
+
+		*/
+		tasks: {
+			deep: true, //com deep: true, o watch fará o monitoramento no array e nos elementos do array
+			handler() {
+				localStorage.setItem('tasksStorage', JSON.stringify(this.tasks))
+			}
+ 		}
+	},
 	methods: {
 		addTask(task) {
 			if(task.name) {
@@ -50,6 +71,10 @@ export default {
 			this.tasks.splice(index, 1)
 
 		}
+	},
+	created() {
+		const json = localStorage.getItem('tasksStorage')
+		this.tasks = JSON.parse(json) || []
 	}
 
 

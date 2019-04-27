@@ -1,7 +1,7 @@
 <template>
     <div @dblclick="task.pending = !task.pending" :class="stateClass" class="task">
         <span @click.stop="$emit('taskDeleted', task)" class="close">x</span>
-       <p> {{ task.name }} </p>
+       <p> {{ task.name }} {{ task.index}} </p>
 
     </div>
 </template>
@@ -27,7 +27,7 @@ export default {
 .task {
     position: relative;
     box-sizing: border-box;
-    width: 350px;
+    width: 300px;
     height: 150px;
     padding: 10px;
     border-radius: 8px;
@@ -53,22 +53,13 @@ export default {
     text-decoration: line-through;
 }
 
-.pending .close {
-    border-left: 12px solid #B73229;
-
-}
-
-.done .close {
-    border-left: 12px solid  #0A8F08;
-
-}
 
 .close {
     position: absolute;
     right: 10px;
     top: 10px;
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 800;
     height: 10px;
     width: 10px;
     border-radius: 5px;
