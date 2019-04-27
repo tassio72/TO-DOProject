@@ -1,6 +1,6 @@
 <template>
-    <div :class="stateClass" class="task">
-        <span @click="$emit('taskDeleted', task)" class="close">x</span>
+    <div @dblclick="task.pending = !task.pending" :class="stateClass" class="task">
+        <span @click.stop="$emit('taskDeleted', task)" class="close">x</span>
        <p> {{ task.name }} </p>
 
     </div>
@@ -34,6 +34,7 @@ export default {
     font-size: 2rem;
     font-weight: 300;
     user-select: none; /*impede que o user selecione o conteúdo*/
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
